@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">AppBitacora</string>
+
+
+    <!-- Lauput Persona -->
+    <string name="l_matricula">Matricula</string>
+    <string name="l_correo">Correo</string>
+    <string name="l_nombre">Nombre</string>
+    <string name="l_carrera">Carrera</string>
+    <string name="l_gradogrupo">Grado y Grupo</string>
+    <string name="l_rol">Rol</string>
 </resources>
