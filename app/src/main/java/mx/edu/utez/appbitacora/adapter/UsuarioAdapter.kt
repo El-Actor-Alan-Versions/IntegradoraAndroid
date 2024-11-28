@@ -38,6 +38,7 @@ class UsuarioAdapter(var list: MutableList<Usuario>): RecyclerView.Adapter<Usuar
             txtRol.text = usuario.rol
             txtGraadoG.text = usuario.gradoGrupo
         }
+
         holder.itemView.setOnClickListener{
             onItemClick?.invoke(usuario)
         }
