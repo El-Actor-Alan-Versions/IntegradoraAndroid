@@ -34,7 +34,7 @@ class UsuarioAdapter(var list: MutableList<Usuario>): RecyclerView.Adapter<Usuar
             txtMatricula.text= usuario.matricula
             txtNombre.text = usuario.nombre
             txtCorreo.text = usuario.correo
-            txtCarrera.text = usuario.correo
+            txtCarrera.text = usuario.carrera
             txtRol.text = usuario.rol
             txtGraadoG.text = usuario.gradoGrupo
         }
