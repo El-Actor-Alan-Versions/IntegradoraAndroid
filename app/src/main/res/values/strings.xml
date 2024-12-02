@@ -10,4 +10,8 @@
     <string name="l_gradogrupo">Grado y Grupo</string>
     <string name="l_rol">Rol</string>
     <string name="l_contra">Contraseña</string>
+    <string name="l_botonRegistrar">Registrar</string>
+    <string name="l_botonActualizar">Actualizar</string>
+    <string name="l_botonDescativar">Desactivar</string>
+    <string name="l_botonRegresar">Regresar</string>
 </resources>

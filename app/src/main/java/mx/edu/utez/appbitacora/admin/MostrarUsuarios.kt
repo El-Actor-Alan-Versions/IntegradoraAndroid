@@ -1,5 +1,6 @@
 package mx.edu.utez.appbitacora.admin
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -22,7 +23,7 @@ class MostrarUsuarios : AppCompatActivity() {
 
 
         val queue = Volley.newRequestQueue(this)
-        val url = "http://192.168.106.20:8080/api/Allusuarios"
+        val url = "http://192.168.105.43:8080/api/usuarios"
         val body = null
         val metodo = Request.Method.GET
 
@@ -47,7 +48,20 @@ class MostrarUsuarios : AppCompatActivity() {
             binding.rvUsuarios.adapter = adapter
             binding.rvUsuarios.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
             Toast.makeText(this, "Bien",Toast.LENGTH_SHORT).show()
+            adapter.onItemClick = {usuario ->
+                val intent = Intent( this, EditarAlumno::class.java)
+                intent.putExtra("id",usuario.id.toString())
+                intent.putExtra("nombre",usuario.nombre)
+                intent.putExtra("matricula",usuario.matricula)
+                intent.putExtra("correo",usuario.correo)
+                intent.putExtra("carrera",usuario.carrera)
+                intent.putExtra("gradoG",usuario.gradoGrupo)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                startActivity(intent)
+
+            }
         }
+
         val errorListener = Response.ErrorListener { result ->
             Toast.makeText(this, "No", Toast.LENGTH_LONG).show()
         }
