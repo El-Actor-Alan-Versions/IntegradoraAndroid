@@ -9,4 +9,5 @@
     <string name="l_carrera">Carrera</string>
     <string name="l_gradogrupo">Grado y Grupo</string>
     <string name="l_rol">Rol</string>
+    <string name="l_contra">Contraseña</string>
 </resources>

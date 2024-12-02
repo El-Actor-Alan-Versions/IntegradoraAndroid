@@ -22,7 +22,7 @@ class MostrarUsuarios : AppCompatActivity() {
 
 
         val queue = Volley.newRequestQueue(this)
-        val url = "http://192.168.107.122:8080/api/Allusuarios"
+        val url = "http://192.168.106.20:8080/api/Allusuarios"
         val body = null
         val metodo = Request.Method.GET
 

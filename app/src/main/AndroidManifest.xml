@@ -17,6 +17,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".admin.InsercionAlumnos"
+            android:exported="false" />
+        <activity
             android:name=".admin.MostrarUsuarios"
             android:exported="true">
             <intent-filter>
@@ -31,7 +34,6 @@
         <activity
             android:name=".RecibirQr"
             android:exported="false" />
-
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="fullSensor"

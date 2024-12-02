@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.journeyapps.barcodescanner.ScanContract
 import com.journeyapps.barcodescanner.ScanIntentResult
 import com.journeyapps.barcodescanner.ScanOptions
+import mx.edu.utez.appbitacora.admin.InsercionAlumnos
 import mx.edu.utez.appbitacora.databinding.ActivityMainBinding
 
 
@@ -19,6 +20,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+        binding.btnInsertar.setOnClickListener {
+            val intel = Intent(this,InsercionAlumnos::class.java)
+            startActivity(intel)
+        }
 
         binding.btnScan.setOnClickListener {
             //Esto es para configurar el scan
