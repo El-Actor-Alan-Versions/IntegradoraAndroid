@@ -20,5 +20,19 @@
     <string name="a_m_btn_mostrar">Mostrar Alumnos</string>
     <string name="a_m_btn_registrar">Registrar Alumno</string>
     <string name="a_m_btn_inicio">Inicio</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
 
+
+    <!-- Layout Labs -->
+    <string name="l_labs_id">Id</string>
+    <string name="l_labs_nom">Nombre Lab</string>
+    <string name="l_labs_docencia">Docencia</string>
+    <string name="l_labs_estatus">Estatus</string>
+    <!-- Menu Admin -->
+    <string name="m_labs_mostrar">Mostrar</string>
+    <string name="m_labs_registrar">Registrar</string>
 </resources>
