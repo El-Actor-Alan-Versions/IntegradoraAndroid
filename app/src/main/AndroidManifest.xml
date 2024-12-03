@@ -17,13 +17,16 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".admin.MostrarUsuarios"
+            android:exported="false" />
+        <activity
             android:name=".admin.EditarAlumno"
             android:exported="false" />
         <activity
             android:name=".admin.InsercionAlumnos"
             android:exported="false" />
         <activity
-            android:name=".admin.MostrarUsuarios"
+            android:name=".admin.MenuAdmin"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

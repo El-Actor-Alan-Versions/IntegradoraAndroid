@@ -1,7 +1,10 @@
 package mx.edu.utez.appbitacora.admin
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -22,6 +25,7 @@ class InsercionAlumnos : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityInsercionAlumnosBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setSupportActionBar(binding.toolbar2)
 
         val list = listOf("Alumno","Admin","Soporte")
         val adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1, list)
@@ -69,5 +73,30 @@ class InsercionAlumnos : AppCompatActivity() {
 
         }
 
+    }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_admin, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.itmMostrar ->{
+                val intent = Intent(this, MostrarUsuarios::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                startActivity(intent)
+            }
+            R.id.itmRegistro ->{
+                val intent = Intent(this, InsercionAlumnos::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                startActivity(intent)
+            }
+            R.id.itmInicio ->{
+                val intent = Intent(this, MenuAdmin::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                startActivity(intent)
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

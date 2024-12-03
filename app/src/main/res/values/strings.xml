@@ -14,4 +14,11 @@
     <string name="l_botonActualizar">Actualizar</string>
     <string name="l_botonDescativar">Desactivar</string>
     <string name="l_botonRegresar">Regresar</string>
+
+    <!-- Menu Admin -->
+    <string name="a_m_btn_salir">Salir</string>
+    <string name="a_m_btn_mostrar">Mostrar Alumnos</string>
+    <string name="a_m_btn_registrar">Registrar Alumno</string>
+    <string name="a_m_btn_inicio">Inicio</string>
+
 </resources>

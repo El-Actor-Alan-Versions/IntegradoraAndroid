@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/itmMostrar"
+        android:title="@string/a_m_btn_mostrar" />
+    <item
+        android:id="@+id/itmRegistro"
+        android:title="@string/a_m_btn_registrar" />
+    <item
+        android:id="@+id/itmInicio"
+        android:title="@string/a_m_btn_inicio" />
+</menu>
