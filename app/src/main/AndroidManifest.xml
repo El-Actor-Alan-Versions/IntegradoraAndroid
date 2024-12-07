@@ -17,6 +17,12 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".IniciarSesion"
+            android:exported="false" />
+        <activity
+            android:name=".laboratorio.EditarLabs"
+            android:exported="false" />
+        <activity
             android:name=".laboratorio.RegistrarLabs"
             android:exported="false" />
         <activity
