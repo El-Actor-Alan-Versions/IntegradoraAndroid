@@ -35,7 +35,9 @@
     <!-- Menu Admin -->
     <string name="m_labs_mostrar">Mostrar</string>
     <string name="m_labs_registrar">Registrar</string>
+
     <string name="p_inisio_sesion_btn">Iniciar Sesión</string>
     <string name="m_inisio_sesion_txt_correo">Matricula</string>
     <string name="m_inisio_sesion_txt_cintra">Contraseña</string>
+    <string name="m_inisio_sesion_txt_cerrarsesion">Cerrar Sesión</string>
 </resources>

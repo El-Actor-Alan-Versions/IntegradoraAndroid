@@ -56,7 +56,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".registro.MainActivity"
             android:exported="false" />
         <activity
             android:name=".RecibirQr"

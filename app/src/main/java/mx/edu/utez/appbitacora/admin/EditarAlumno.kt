@@ -45,7 +45,7 @@ class EditarAlumno : AppCompatActivity() {
             val carrera = binding.edtCarreraU.text.toString()
 
             val queue = Volley.newRequestQueue(this)
-            val url = "http://192.168.105.43:8080/api/usuarios/"+id
+            val url = "http://192.168.100.5:8080/api/usuarios/"+id
             val metodo = Request.Method.PUT
             val body = JSONObject()
             body.put("matricula", matricula)

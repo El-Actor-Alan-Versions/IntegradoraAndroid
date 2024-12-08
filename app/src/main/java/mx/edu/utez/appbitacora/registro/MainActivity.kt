@@ -1,13 +1,16 @@
-package mx.edu.utez.appbitacora
+package mx.edu.utez.appbitacora.registro
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.journeyapps.barcodescanner.ScanContract
 import com.journeyapps.barcodescanner.ScanIntentResult
 import com.journeyapps.barcodescanner.ScanOptions
+import mx.edu.utez.appbitacora.R
+import mx.edu.utez.appbitacora.RecibirQr
 import mx.edu.utez.appbitacora.admin.InsercionAlumnos
 import mx.edu.utez.appbitacora.databinding.ActivityMainBinding
 
@@ -20,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setSupportActionBar(binding.bottomAppBar3)
 
 
         binding.btnInsertar.setOnClickListener {
@@ -52,10 +56,22 @@ class MainActivity : AppCompatActivity() {
 
             //Para mandar a la sig pagina
             valorQr = result.contents;
-            val intent = Intent(this,RecibirQr::class.java)
+            val intent = Intent(this, RecibirQr::class.java)
             intent.putExtra("qr_result",valorQr)
             startActivity(intent)
 
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_registro, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
