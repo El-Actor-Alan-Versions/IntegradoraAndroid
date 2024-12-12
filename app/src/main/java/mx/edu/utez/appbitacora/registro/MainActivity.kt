@@ -10,7 +10,6 @@ import com.journeyapps.barcodescanner.ScanContract
 import com.journeyapps.barcodescanner.ScanIntentResult
 import com.journeyapps.barcodescanner.ScanOptions
 import mx.edu.utez.appbitacora.R
-import mx.edu.utez.appbitacora.RecibirQr
 import mx.edu.utez.appbitacora.admin.InsercionAlumnos
 import mx.edu.utez.appbitacora.databinding.ActivityMainBinding
 
@@ -56,7 +55,7 @@ class MainActivity : AppCompatActivity() {
 
             //Para mandar a la sig pagina
             valorQr = result.contents;
-            val intent = Intent(this, RecibirQr::class.java)
+            val intent = Intent(this, InicioRegistro::class.java)
             intent.putExtra("qr_result",valorQr)
             startActivity(intent)
 

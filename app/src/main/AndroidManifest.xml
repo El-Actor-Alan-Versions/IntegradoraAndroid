@@ -59,9 +59,6 @@
             android:name=".registro.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".RecibirQr"
-            android:exported="false" />
-        <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="fullSensor"
             tools:replace="screenOrientation" />

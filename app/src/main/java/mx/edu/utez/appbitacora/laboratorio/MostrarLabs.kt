@@ -31,7 +31,7 @@ class MostrarLabs : AppCompatActivity() {
 
         val queue = Volley.newRequestQueue(this)
         val metodo = Request.Method.GET
-        val url = "http://192.168.111.30:8080/api/labsAll"
+        val url = "http://192.168.106.3:8080/api/labsAll"
         val listener = Response.Listener<JSONObject> { result ->
             val list = mutableListOf<Labs>()
             val locate = result.getJSONObject("laboratorioResponse").getJSONArray("laboratorios")

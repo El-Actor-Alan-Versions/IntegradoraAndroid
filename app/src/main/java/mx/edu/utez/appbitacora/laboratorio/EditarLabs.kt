@@ -80,7 +80,7 @@ class EditarLabs : AppCompatActivity() {
     fun desactivarLabs(id : Long){
         val queue = Volley.newRequestQueue(this)
         val metodo = Request.Method.PUT
-        val url = "http://192.168.111/api/labsModi/"+id
+        val url = "http://192.168.106.3/api/labsModi/"+id
         val listener = Response.Listener<JSONObject> { result ->
             if(result.getJSONArray("metadata").getJSONObject(0).getString("codigo").equals("00")){
                 Toast.makeText(this, "DesactivacionCorrecta", Toast.LENGTH_LONG).show()

@@ -5,6 +5,9 @@
         android:id="@+id/mnuInicioRe"
         android:title="@string/a_m_btn_inicio" />
     <item
+        android:id="@+id/mnuRegistrar"
+        android:title="mnuRegistrar" />
+    <item
         android:id="@+id/mnuSalirR"
         android:title="@string/a_m_btn_salir" />
     <item
