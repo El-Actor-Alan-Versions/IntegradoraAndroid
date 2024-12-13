@@ -10,6 +10,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import mx.edu.utez.appbitacora.R
 import mx.edu.utez.appbitacora.databinding.ActivityMenuAdminBinding
+import androidx.cardview.widget.CardView
 
 class MenuAdmin : AppCompatActivity() {
     private lateinit var binding: ActivityMenuAdminBinding
@@ -17,10 +18,31 @@ class MenuAdmin : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMenuAdminBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setSupportActionBar(binding.toolbar)
+        setSupportActionBar(binding.bottomAppBar5)
+
+        // Configuración de las CardViews (Botones)
+        val cardButton1 = findViewById<CardView>(R.id.cardButton1)
+        val cardButton2 = findViewById<CardView>(R.id.cardButton2)
+
+        // Configura las acciones de los botones
+        cardButton1.setOnClickListener {
+            onCardClick1()
+        }
+
+        cardButton2.setOnClickListener {
+            onCardClick2()
+        }
 
 
+    }
 
+    private fun onCardClick1() {
+        val intent = Intent(this, InsercionAlumnos::class.java)
+        startActivity(intent)
+    }
+    private fun onCardClick2() {
+        val intent = Intent(this, MostrarUsuarios::class.java)
+        startActivity(intent)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

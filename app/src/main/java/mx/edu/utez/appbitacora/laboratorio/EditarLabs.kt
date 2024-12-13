@@ -45,7 +45,7 @@ class EditarLabs : AppCompatActivity() {
         val queue = Volley.newRequestQueue(this)
         Log.i("Ayuda", id.toString())
         val metodo = Request.Method.PUT
-        val url = "http://192.168.111.30:8080/api/labs/"+id
+        val url = "http://192.168.1.68:8080/api/labs/"+id
         val body = JSONObject()
         body.put("id_lab", lab.id)
         body.put("nombre_lab",lab.nomLab)
@@ -80,7 +80,7 @@ class EditarLabs : AppCompatActivity() {
     fun desactivarLabs(id : Long){
         val queue = Volley.newRequestQueue(this)
         val metodo = Request.Method.PUT
-        val url = "http://192.168.106.3/api/labsModi/"+id
+        val url = "http://192.168.1.68:8080/api/labsModi/"+id
         val listener = Response.Listener<JSONObject> { result ->
             if(result.getJSONArray("metadata").getJSONObject(0).getString("codigo").equals("00")){
                 Toast.makeText(this, "DesactivacionCorrecta", Toast.LENGTH_LONG).show()

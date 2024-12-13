@@ -38,7 +38,7 @@
             android:name=".laboratorio.MenuLabs"
             android:exported="false" />
         <activity
-            android:name=".admin.MenuAdmin"
+            android:name=".IniciarSesion"
             android:exported="false" />
         <activity
             android:name=".admin.MostrarUsuarios"
@@ -50,7 +50,7 @@
             android:name=".admin.InsercionAlumnos"
             android:exported="false" />
         <activity
-            android:name=".registro.InicioRegistro"
+            android:name=".admin.MenuAdmin"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -59,12 +59,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".IniciarSesion"
+            android:name=".registro.InicioRegistro"
             android:exported="false" />
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="fullSensor"
             tools:replace="screenOrientation" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
