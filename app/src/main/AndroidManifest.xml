@@ -17,8 +17,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".registro.Registrar"
+            android:name=".registro.InicioRegistro"
             android:exported="false" />
+
         <activity
             android:name=".registro.MainActivity"
             android:exported="false" />
@@ -50,7 +51,7 @@
             android:name=".admin.InsercionAlumnos"
             android:exported="false" />
         <activity
-            android:name=".registro.InicioRegistro"
+            android:name=".registro.MostrarRegistros"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

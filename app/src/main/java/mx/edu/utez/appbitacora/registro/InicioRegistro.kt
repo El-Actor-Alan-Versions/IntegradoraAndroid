@@ -47,15 +47,16 @@ class InicioRegistro : AppCompatActivity() {
                         if (equipoObtenido && idAlumno.isNotEmpty() && idEquipo.isNotEmpty() && idLab.isNotEmpty()) {
                             try {
                                 val registro = Registro(
+                                    0,
                                     fecha,
                                     horaIniciar,
                                     horaFinal,
                                     docente,
                                     descri,
                                     true,
-                                    idAlumno.toInt(),
-                                    idEquipo.toInt(),
-                                    idLab.toInt()
+                                    idAlumno.toLong(),
+                                    idEquipo.toLong(),
+                                    idLab.toLong()
                                 )
                                 registrarRegistro(registro)
                             } catch (e: NumberFormatException) {
