@@ -9,10 +9,49 @@
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
+        app:backgroundTint="#009688"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtNomLab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:ems="10"
+        android:hint="@string/l_labs_nom"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottomAppBar" />
+
+    <Button
+        android:id="@+id/btnRegistrarLabs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="45dp"
+        android:text="@string/l_botonRegistrar"
+        app:layout_constraintEnd_toEndOf="@+id/edtDocencia"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtDocencia"
+        app:layout_constraintTop_toBottomOf="@+id/edtDocencia" />
+
+    <EditText
+        android:id="@+id/edtDocencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="42dp"
+        android:ems="10"
+        android:hint="@string/l_labs_docencia"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/edtNomLab"
+        app:layout_constraintStart_toStartOf="@+id/edtNomLab"
+        app:layout_constraintTop_toBottomOf="@+id/edtNomLab" />
 </androidx.constraintlayout.widget.ConstraintLayout>
