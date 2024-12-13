@@ -45,7 +45,7 @@ class InsercionAlumnos : AppCompatActivity() {
                 !correo.isNullOrEmpty() && !gradoGrupo.isNullOrEmpty() && !carrera.isNullOrEmpty() && !rol.isNullOrEmpty()){
 
                 val queue = Volley.newRequestQueue(this)
-                val url = "http://192.168.106.3:8080/api/usuarios"
+                val url = "http://192.168.100.5:8080/api/usuarios"
                 val metodo = Request.Method.POST
                 val body = JSONObject()
                 body.put("matricula", matricula)

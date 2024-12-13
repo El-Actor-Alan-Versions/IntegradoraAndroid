@@ -51,7 +51,7 @@
             android:name=".admin.InsercionAlumnos"
             android:exported="false" />
         <activity
-            android:name=".registro.MostrarRegistros"
+            android:name=".IniciarSesion"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -60,7 +60,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".IniciarSesion"
+            android:name=".registro.MostrarRegistros"
             android:exported="false" />
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
