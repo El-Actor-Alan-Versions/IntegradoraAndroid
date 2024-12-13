@@ -29,7 +29,7 @@ class MostrarRegistros : AppCompatActivity() {
 
     fun mostrarLabs(){
         val queue = Volley.newRequestQueue(this)
-        val url = "http://192.168.100.5:8080/api/registros"
+        val url = "http://192.168.1.68:8080/api/registros"
         val metodo = Request.Method.GET
         val listener = Response.Listener<JSONObject> { r ->
             val locate = r.getJSONObject("registroResponse").getJSONArray("registros")

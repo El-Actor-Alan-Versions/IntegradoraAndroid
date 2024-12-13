@@ -8,6 +8,45 @@
     tools:context=".admin.MenuAdmin">
 
     <!-- BottomAppBar arriba -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardButton4"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardButton2" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="116dp"
+                android:layout_height="53dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="30dp"
+                app:srcCompat="@drawable/pizarron" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:scrollbarSize="16dp"
+                android:text="Laboratorios"
+                android:textColor="#030A8C"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar5"
         android:layout_width="match_parent"
@@ -34,7 +73,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="100dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="80dp"
             android:fontFamily="@font/poppins"
             android:text="Administrador"
             android:textColor="#FFFFFF"
@@ -50,7 +89,7 @@
         android:layout_width="180dp"
         android:layout_height="150dp"
         android:layout_marginStart="210dp"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="120dp"
         android:clickable="true"
         android:focusable="true"
         android:onClick="onCardClick2"
@@ -81,7 +120,7 @@
                 android:fontFamily="@font/poppins"
                 android:gravity="center"
                 android:scrollbarSize="15sp"
-                android:text="Ver Registros"
+                android:text="Alumnos "
                 android:textColor="#030A8C"
                 android:textSize="15sp" />
         </LinearLayout>
@@ -92,7 +131,7 @@
         android:layout_width="180dp"
         android:layout_height="150dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="120dp"
         android:clickable="true"
         android:focusable="true"
         android:onClick="onCardClick1"
@@ -115,7 +154,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:contentDescription="Icono 1"
-                android:src="@drawable/forma" />
+                android:src="@drawable/agregar" />
 
             <TextView
                 android:layout_width="140dp"
@@ -156,31 +195,168 @@
             <ImageView
                 android:id="@+id/icon3"
                 android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 android:contentDescription="Icono 1"
-                android:src="@drawable/cerrar" />
+                android:src="@drawable/forma" />
 
             <TextView
-                android:layout_width="140dp"
+                android:layout_width="158dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/poppins"
                 android:gravity="center"
                 android:scrollbarSize="15sp"
+                android:text="Registrar Laboratorio"
+                android:textColor="#030A8C"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Nuevas CardViews -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardButton5"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardButton4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/no" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Equipos"
+                android:textColor="#030A8C"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardButton6"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardButton3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:src="@drawable/si" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Registrar Equipos"
+                android:textColor="#030A8C"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardButton8"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardButton6">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/cerrar" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="Salir"
                 android:textColor="#030A8C"
                 android:textSize="15sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="118dp"
-        android:layout_height="116dp"
-        android:layout_marginTop="120dp"
-        app:layout_constraintEnd_toEndOf="parent"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardButton9"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bottomAppBar5"
-        app:srcCompat="@drawable/ajustes" />
+        app:layout_constraintTop_toBottomOf="@+id/cardButton5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/list" /> <!-- Aquí coloca tu nuevo ícono -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Registros Bitacora"
+                android:textColor="#030A8C"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

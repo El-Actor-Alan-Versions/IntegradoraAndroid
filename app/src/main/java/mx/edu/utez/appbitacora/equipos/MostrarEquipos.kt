@@ -30,7 +30,7 @@ class MostrarEquipos : AppCompatActivity() {
 
     fun verEquipos (){
         val queue = Volley.newRequestQueue(this)
-        val url = "http://192.168.100.5:8080/api/equipos"
+        val url = "http://192.168.1.68:8080/api/equipos"
         val body = null
         val metodo = Request.Method.GET
         val listener = Response.Listener<JSONObject> { r ->

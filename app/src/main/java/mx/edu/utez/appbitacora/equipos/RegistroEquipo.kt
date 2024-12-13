@@ -1,5 +1,6 @@
 package mx.edu.utez.appbitacora.equipos
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.ArrayAdapter
@@ -9,6 +10,7 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
+import mx.edu.utez.appbitacora.admin.MenuAdmin
 import mx.edu.utez.appbitacora.databinding.ActivityRegistroEquipoBinding
 import org.json.JSONObject
 
@@ -35,11 +37,17 @@ class RegistroEquipo : AppCompatActivity() {
                 Toast.makeText(this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT).show()
             }
         }
+
+        binding.btnSi.setOnClickListener{
+            val intnet = Intent(this, MenuAdmin::class.java)
+            intnet.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intnet)
+        }
     }
 
     private fun enviarDatos(numeroEnLab: Int, codigo: String) {
         val queue = Volley.newRequestQueue(this)
-        val url = "http://192.168.100.5:8080/api/equipos"
+        val url = "http://192.168.1.68:8080/api/equipos"
         val metodo = Request.Method.POST
 
         // Crear el cuerpo JSON con el formato esperado

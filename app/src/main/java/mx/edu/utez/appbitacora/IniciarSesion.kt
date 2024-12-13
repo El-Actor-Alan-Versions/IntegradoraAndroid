@@ -41,7 +41,7 @@ class IniciarSesion : AppCompatActivity() {
     fun login(email : String, password : String){
         val queue = Volley.newRequestQueue(this)
         val metodo = com.android.volley.Request.Method.POST
-        val url = "http://192.168.106.3:8080/api/login?correo=${email}@utez.edu.mx&contrasenia=${password}"
+        val url = "http://192.168.1.68:8080/api/login?correo=${email}@utez.edu.mx&contrasenia=${password}"
         val listener = Response.Listener<JSONObject> { r ->
             user = r.getJSONObject("usuarioResponse").getJSONArray("usuario").getJSONObject(0).getString("rol")
 

@@ -12,6 +12,15 @@ import mx.edu.utez.appbitacora.R
 import mx.edu.utez.appbitacora.databinding.ActivityMenuAdminBinding
 import androidx.cardview.widget.CardView
 import android.view.animation.AnimationUtils
+import mx.edu.utez.appbitacora.laboratorio.RegistrarLabs
+import mx.edu.utez.appbitacora.registro.MainActivity
+
+import mx.edu.utez.appbitacora.laboratorio.MostrarLabs
+import mx.edu.utez.appbitacora.equipos.MostrarEquipos
+import mx.edu.utez.appbitacora.equipos.RegistroEquipo
+import mx.edu.utez.appbitacora.registro.MostrarRegistros
+
+
 
 
 class MenuAdmin : AppCompatActivity() {
@@ -28,14 +37,64 @@ class MenuAdmin : AppCompatActivity() {
         binding.cardButton1.startAnimation(animation)
         binding.cardButton2.startAnimation(animation)
         binding.cardButton3.startAnimation(animation)
+        binding.cardButton4.startAnimation(animation)
+        binding.cardButton5.startAnimation(animation)
+        binding.cardButton6.startAnimation(animation)
+        binding.cardButton8.startAnimation(animation)
+        binding.cardButton9.startAnimation(animation)
+
 
 
 
         val cardButton1 = findViewById<CardView>(R.id.cardButton1)
         val cardButton2 = findViewById<CardView>(R.id.cardButton2)
         val cardButton3 = findViewById<CardView>(R.id.cardButton3)
+        val cardButton4 = findViewById<CardView>(R.id.cardButton4)
+        val cardButton5 = findViewById<CardView>(R.id.cardButton5)
+        val cardButton6 = findViewById<CardView>(R.id.cardButton6)
+        val cardButton8 = findViewById<CardView>(R.id.cardButton8)
+        val cardButton9 = findViewById<CardView>(R.id.cardButton9)
 
-        cardButton3.setOnClickListener {
+
+        cardButton9.setOnClickListener{
+            val intnet = Intent(this, MostrarRegistros::class.java)
+            intnet.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intnet)
+        }
+
+        cardButton3.setOnClickListener{
+            val intnet = Intent(this, RegistrarLabs::class.java)
+            intnet.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intnet)
+        }
+
+        //Ver labs
+        cardButton4.setOnClickListener{
+            val intnet = Intent(this, MostrarLabs::class.java)
+            intnet.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intnet)
+        }
+
+        //ver equipos
+        cardButton5.setOnClickListener{
+            val intnet = Intent(this, MostrarEquipos::class.java)
+            intnet.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intnet)
+        }
+
+
+        //Registrar Equipos
+        cardButton6.setOnClickListener{
+            val intnet = Intent(this, RegistroEquipo::class.java)
+            intnet.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intnet)
+        }
+
+
+
+
+
+        cardButton8.setOnClickListener {
             finish() // Cierra la actividad actual
         }
 

@@ -18,6 +18,10 @@ import com.android.volley.toolbox.Volley
 import mx.edu.utez.appbitacora.R
 import mx.edu.utez.appbitacora.databinding.ActivityEditarLabsBinding
 import mx.edu.utez.appbitacora.model.Labs
+import mx.edu.utez.appbitacora.admin.MenuAdmin
+import mx.edu.utez.appbitacora.laboratorio.RegistrarLabs
+import mx.edu.utez.appbitacora.laboratorio.MostrarLabs
+import mx.edu.utez.appbitacora.registro.MostrarRegistros
 import org.json.JSONObject
 
 class EditarLabs : AppCompatActivity() {
@@ -37,20 +41,38 @@ class EditarLabs : AppCompatActivity() {
                 true
             )
             editarLabs(id, lab)
+
         }
+
+
+
+        binding.btnOutFueraPerro.setOnClickListener {
+            val intnet = Intent(this, MostrarLabs::class.java)
+            intnet.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intnet)
+        }
+
+
+
+
 
     }
 
     fun editarLabs(id : Long, lab : Labs){
+
+
+
         val queue = Volley.newRequestQueue(this)
         Log.i("Ayuda", id.toString())
         val metodo = Request.Method.PUT
-        val url = "http://192.168.100.5:8080/api/labs/"+id
+        val url = "http://192.168.1.68:8080/api/labs/"+id
         val body = JSONObject()
         body.put("id_lab", lab.id)
         body.put("nombre_lab",lab.nomLab)
         body.put("docencia", lab.docencia)
         body.put("estatus", lab.estatus)
+
+
 
         val listener = Response.Listener<JSONObject> { result ->
             if(result.getJSONArray("metadata").getJSONObject(0).getString("codigo").equals("00")){
@@ -69,11 +91,16 @@ class EditarLabs : AppCompatActivity() {
         builder.setMessage("Estas seguro?")
         builder.setNegativeButton("SI"){result,_ ->
             queue.add(request)
+            val intnet = Intent(this, MostrarLabs::class.java)
+            intnet.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intnet)
         }
         builder.setPositiveButton("No"){result ,_ ->
 
         }
         builder.show()
+
+
 
     }
 
@@ -106,10 +133,12 @@ class EditarLabs : AppCompatActivity() {
                 startActivity(intent)
             }
             R.id.itmRegistraLab->{
-
+                val intent = Intent(this, RegistrarLabs::class.java)
+                startActivity(intent)
             }
             R.id.itmSalirLab->{
-
+                val intent = Intent(this, MenuAdmin::class.java)
+                startActivity(intent)
             }
         }
         return super.onOptionsItemSelected(item)

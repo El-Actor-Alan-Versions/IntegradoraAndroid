@@ -19,6 +19,8 @@ import mx.edu.utez.appbitacora.R
 import mx.edu.utez.appbitacora.adapter.LabsAdapter
 import mx.edu.utez.appbitacora.databinding.ActivityMostrarLabsBinding
 import mx.edu.utez.appbitacora.model.Labs
+import mx.edu.utez.appbitacora.admin.MenuAdmin
+import mx.edu.utez.appbitacora.laboratorio.RegistrarLabs
 import org.json.JSONObject
 
 class MostrarLabs : AppCompatActivity() {
@@ -27,11 +29,11 @@ class MostrarLabs : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMostrarLabsBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setSupportActionBar(binding.toolbar6)
+        setSupportActionBar(binding.bottomAppBar9)
 
         val queue = Volley.newRequestQueue(this)
         val metodo = Request.Method.GET
-        val url = "http://192.168.100.5:8080/api/labsAll"
+        val url = "http://192.168.1.68:8080/api/labsAll"
         val listener = Response.Listener<JSONObject> { result ->
             val list = mutableListOf<Labs>()
             val locate = result.getJSONObject("laboratorioResponse").getJSONArray("laboratorios")
@@ -79,10 +81,12 @@ class MostrarLabs : AppCompatActivity() {
                 startActivity(intent)
             }
             R.id.itmRegistraLab->{
-
+                val intent = Intent(this, RegistrarLabs::class.java)
+                startActivity(intent)
             }
             R.id.itmSalirLab->{
-
+                val intent = Intent(this, MenuAdmin::class.java)
+                startActivity(intent)
             }
         }
         return super.onOptionsItemSelected(item)

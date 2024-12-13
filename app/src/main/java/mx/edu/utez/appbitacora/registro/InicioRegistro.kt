@@ -83,7 +83,7 @@ class InicioRegistro : AppCompatActivity() {
 
     private fun registrarRegistro(registro: Registro) {
         val queue = Volley.newRequestQueue(this)
-        val url = "http://192.168.100.5:8080/api/registros"
+        val url = "http://192.168.1.69:8080/api/registros"
         val metodo = Request.Method.POST
 
         val body = JSONObject().apply {
@@ -150,7 +150,7 @@ class InicioRegistro : AppCompatActivity() {
 
     private fun obtenerEquipo(codigo: String, onComplete: (Boolean) -> Unit) {
         val queue = Volley.newRequestQueue(this)
-        val url = "http://192.168.100.5:8080/api/equipos/${codigo}"
+        val url = "http://192.168.1.69:8080/api/equipos/${codigo}"
 //        val url = "http://192.168.100.5:8080/api/equipos/51501CE-19-039"
         val metodo = Request.Method.GET
 

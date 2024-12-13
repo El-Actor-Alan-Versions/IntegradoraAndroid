@@ -5,15 +5,15 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#000000"
+    android:background="#FCF5FD"
     tools:context=".equipos.RegistroEquipo">
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar7"
-        android:layout_width="409dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        app:backgroundTint="#009688"
+        app:backgroundTint="#1D0AF5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,6 +26,10 @@
         android:ems="10"
         android:hint="Num"
         android:inputType="number"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/poppins"
+        android:textColor="#2D2961"
+        android:textColorHint="#2D2961"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bottomAppBar7" />
@@ -38,18 +42,43 @@
         android:ems="10"
         android:hint="Code"
         android:inputType="text"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/poppins"
+        android:textColor="#2D2961"
+        android:textColorHint="#2D2961"
         app:layout_constraintEnd_toEndOf="@+id/edtNumeroEquipo"
         app:layout_constraintStart_toStartOf="@+id/edtNumeroEquipo"
         app:layout_constraintTop_toBottomOf="@+id/edtNumeroEquipo" />
 
     <Button
         android:id="@+id/btnRegistroEqipo"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="81dp"
+        android:backgroundTint="#1D0AF3"
+        android:fontFamily="@font/poppins"
         android:text="@string/l_botonRegistrar"
+        android:textSize="18sp"
+        app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="@+id/edtCodigo"
         app:layout_constraintStart_toStartOf="@+id/edtCodigo"
         app:layout_constraintTop_toBottomOf="@+id/edtCodigo" />
+
+    <!-- Botón Regresar -->
+    <Button
+        android:id="@+id/btnSi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FAF3FB"
+        android:fontFamily="@font/poppins"
+        android:text="Regresar"
+        android:textColor="#1D0AF1"
+        android:textSize="16sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/btnRegistroEqipo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnRegistroEqipo"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistroEqipo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
