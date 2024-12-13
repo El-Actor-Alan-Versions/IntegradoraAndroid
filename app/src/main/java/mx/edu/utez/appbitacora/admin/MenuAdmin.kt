@@ -11,6 +11,8 @@ import androidx.core.view.WindowInsetsCompat
 import mx.edu.utez.appbitacora.R
 import mx.edu.utez.appbitacora.databinding.ActivityMenuAdminBinding
 import androidx.cardview.widget.CardView
+import android.view.animation.AnimationUtils
+
 
 class MenuAdmin : AppCompatActivity() {
     private lateinit var binding: ActivityMenuAdminBinding
@@ -19,6 +21,12 @@ class MenuAdmin : AppCompatActivity() {
         binding = ActivityMenuAdminBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setSupportActionBar(binding.bottomAppBar5)
+        // Cargar la animación
+        val animation = AnimationUtils.loadAnimation(this, R.anim.entrada_cards)
+
+        // Aplicar la animación al componente 'mainMenu1'
+        binding.cardButton1.startAnimation(animation)
+        binding.cardButton2.startAnimation(animation)
 
         // Configuración de las CardViews (Botones)
         val cardButton1 = findViewById<CardView>(R.id.cardButton1)
