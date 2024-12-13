@@ -2,15 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/mnuInicioRe"
-        android:title="@string/a_m_btn_inicio" />
-    <item
-        android:id="@+id/mnuRegistrar"
-        android:title="mnuRegistrar" />
-    <item
         android:id="@+id/mnuSalirR"
         android:title="@string/a_m_btn_salir" />
-    <item
-        android:id="@+id/mnuCerrarSesion"
-        android:title="@string/m_inisio_sesion_txt_cerrarsesion" />
 </menu>

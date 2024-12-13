@@ -27,10 +27,19 @@ class MenuAdmin : AppCompatActivity() {
         // Aplicar la animación al componente 'mainMenu1'
         binding.cardButton1.startAnimation(animation)
         binding.cardButton2.startAnimation(animation)
+        binding.cardButton3.startAnimation(animation)
 
-        // Configuración de las CardViews (Botones)
+
+
         val cardButton1 = findViewById<CardView>(R.id.cardButton1)
         val cardButton2 = findViewById<CardView>(R.id.cardButton2)
+        val cardButton3 = findViewById<CardView>(R.id.cardButton3)
+
+        cardButton3.setOnClickListener {
+            finish() // Cierra la actividad actual
+        }
+
+
 
         // Configura las acciones de los botones
         cardButton1.setOnClickListener {

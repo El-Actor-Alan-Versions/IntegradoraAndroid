@@ -25,7 +25,7 @@ class InsercionAlumnos : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityInsercionAlumnosBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setSupportActionBar(binding.toolbar2)
+        setSupportActionBar(binding.bottomAppBar6)
 
         val list = listOf("Alumno","Admin","Soporte")
         val adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1, list)
@@ -69,6 +69,8 @@ class InsercionAlumnos : AppCompatActivity() {
                 val request = JsonObjectRequest(metodo, url, body, listener, errorListener)
                 queue.add(request)
 
+            }else{
+                Toast.makeText(this, "Completa todos los campos", Toast.LENGTH_LONG).show()
             }
 
         }

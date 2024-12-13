@@ -5,116 +5,182 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FCF5FD"
     tools:context=".admin.EditarAlumno">
 
-    <EditText
-        android:id="@+id/edtName"
+    <TextView
+        android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="@string/l_nombre"
-        android:inputType="text"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="200dp"
+        android:fontFamily="@font/poppins"
+        android:text="Editar Datos"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar3" />
+        app:layout_constraintTop_toBottomOf="@+id/bottomAppBar8" />
 
-    <EditText
-        android:id="@+id/edtMatriculaU"
-        android:layout_width="wrap_content"
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar8"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="@string/l_matricula"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/edtName"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edtName"
-        app:layout_constraintTop_toBottomOf="@+id/edtName" />
+        android:layout_gravity="bottom"
+        app:backgroundTint="#1D0AF5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/edtEmailU"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:hint="@string/l_correo"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="@+id/edtMatriculaU"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edtMatriculaU"
-        app:layout_constraintTop_toBottomOf="@+id/edtMatriculaU" />
-
-    <EditText
-        android:id="@+id/edtGradoGrupoU"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:ems="10"
-        android:hint="@string/l_gradogrupo"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/edtEmailU"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edtEmailU"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmailU" />
-
-    <EditText
-        android:id="@+id/edtCarreraU"
-        android:layout_width="wrap_content"
+    <!-- Nombre TextInput -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtNameLayout"
+        android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="@string/l_carrera"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/edtGradoGrupoU"
+        android:hint="@string/l_nombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/poppins"
+            android:textColor="#2D2961"
+            android:textColorHint="#2D2961" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Matrícula TextInput -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtMatriculaLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/l_matricula"
+        app:layout_constraintEnd_toEndOf="@+id/edtNameLayout"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@+id/edtNameLayout"
+        app:layout_constraintTop_toBottomOf="@+id/edtNameLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtMatriculaU"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/poppins"
+            android:textColor="#2D2961"
+            android:textColorHint="#2D2961" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Correo TextInput -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtEmailLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/l_correo"
+        app:layout_constraintEnd_toEndOf="@+id/edtMatriculaLayout"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edtGradoGrupoU"
-        app:layout_constraintTop_toBottomOf="@+id/edtGradoGrupoU" />
+        app:layout_constraintStart_toStartOf="@+id/edtMatriculaLayout"
+        app:layout_constraintTop_toBottomOf="@+id/edtMatriculaLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtEmailU"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/poppins"
+            android:inputType="textEmailAddress"
+            android:textColor="#2D2961"
+            android:textColorHint="#2D2961" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Grado/Grupo TextInput -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtGradoGrupoLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/l_gradogrupo"
+        app:layout_constraintEnd_toEndOf="@+id/edtEmailLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtEmailLayout"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmailLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtGradoGrupoU"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/poppins"
+            android:textColor="#2D2961"
+            android:textColorHint="#2D2961" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Carrera TextInput -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtCarreraLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/l_carrera"
+        app:layout_constraintEnd_toEndOf="@+id/edtGradoGrupoLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtGradoGrupoLayout"
+        app:layout_constraintTop_toBottomOf="@+id/edtGradoGrupoLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtCarreraU"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/poppins"
+            android:textColor="#2D2961"
+            android:textColorHint="#2D2961" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btnUpdate"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#1D0AF3"
+        android:fontFamily="@font/poppins"
         android:text="@string/l_botonActualizar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtCarreraU" />
+        android:textSize="18sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/edtCarreraLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtCarreraLayout"
+        app:layout_constraintTop_toBottomOf="@+id/edtCarreraLayout" />
 
     <Button
         android:id="@+id/btnDesactivar"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="@string/l_botonDescativar"
+        android:backgroundTint="#FF0000"
+        android:fontFamily="@font/poppins"
+        android:text="Desactivar"
+        android:textSize="18sp"
+        app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="@+id/btnUpdate"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btnUpdate"
         app:layout_constraintTop_toBottomOf="@+id/btnUpdate" />
 
     <Button
         android:id="@+id/btnRegresar"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#1D0AF3"
+        android:fontFamily="@font/poppins"
         android:text="@string/l_botonRegresar"
+        android:textSize="18sp"
+        app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="@+id/btnDesactivar"
-        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btnDesactivar"
         app:layout_constraintTop_toBottomOf="@+id/btnDesactivar" />
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar3"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package mx.edu.utez.appbitacora.registro
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -8,6 +9,7 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
+import mx.edu.utez.appbitacora.admin.InsercionAlumnos
 import mx.edu.utez.appbitacora.databinding.ActivityInicioRegistroBinding
 import mx.edu.utez.appbitacora.model.Registro
 import org.json.JSONObject
@@ -69,6 +71,11 @@ class InicioRegistro : AppCompatActivity() {
                     Toast.makeText(this, "Error al obtener datos del alumno.", Toast.LENGTH_SHORT).show()
                 }
             }
+        }
+
+        binding.btnVolverRegistro.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
     }
 

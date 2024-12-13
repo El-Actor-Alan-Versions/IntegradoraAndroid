@@ -26,7 +26,7 @@ class EditarAlumno : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityEditarAlumnoBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setSupportActionBar(binding.toolbar3)
+        setSupportActionBar(binding.bottomAppBar8)
         val id = intent.getStringExtra("id")
         binding.edtName.setText(intent.getStringExtra("nombre"))
         binding.edtMatriculaU.setText(intent.getStringExtra("matricula"))
@@ -92,7 +92,7 @@ class EditarAlumno : AppCompatActivity() {
             builder.setNegativeButton("Si"){result,_ ->
                 queue.add(request)
             }
-            builder.setPositiveButton("Si"){result,_ ->
+            builder.setPositiveButton("No"){result,_ ->
 
             }
             builder.show()

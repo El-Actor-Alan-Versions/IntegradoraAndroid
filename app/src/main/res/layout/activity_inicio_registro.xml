@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FCF5FD"
     tools:context=".registro.InicioRegistro">
 
     <com.google.android.material.bottomappbar.BottomAppBar
@@ -17,103 +18,189 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/edtMatricula"
-        android:layout_width="wrap_content"
+    <!-- Matrícula -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtMatriculaLayout"
+        android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
+        android:layout_marginTop="80dp"
         android:hint="@string/l_matricula"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/txtAver"
-        app:layout_constraintHorizontal_bias="0.513"
-        app:layout_constraintStart_toStartOf="@+id/txtAver"
-        app:layout_constraintTop_toBottomOf="@+id/txtAver" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottomAppBar4">
 
-    <EditText
-        android:id="@+id/edtDescripReg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:ems="10"
-        android:hint="@string/m_registro_txt_descripcion"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/edtDocente"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edtDocente"
-        app:layout_constraintTop_toBottomOf="@+id/edtDocente" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtMatricula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/edtFecha"
-        android:layout_width="wrap_content"
+    <!-- Fecha -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtFechaLayout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:ems="10"
+        android:layout_marginTop="10dp"
         android:hint="@string/m_registro_txt_fecha1"
-        android:inputType="date"
-        app:layout_constraintEnd_toEndOf="@+id/edtMatricula"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edtMatricula"
-        app:layout_constraintTop_toBottomOf="@+id/edtMatricula" />
+        app:layout_constraintEnd_toEndOf="@+id/edtMatriculaLayout"
+        app:layout_constraintStart_toStartOf="@+id/edtMatriculaLayout"
+        app:layout_constraintTop_toBottomOf="@+id/edtMatriculaLayout">
 
-    <EditText
-        android:id="@+id/edtHoraFin"
-        android:layout_width="wrap_content"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/poppins"
+            android:inputType="date"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Hora Inicio -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtHoraIniLayout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:hint="@string/m_resistro_txt_horaInicio"
+        app:layout_constraintEnd_toEndOf="@+id/edtFechaLayout"
+        app:layout_constraintStart_toStartOf="@+id/edtFechaLayout"
+        app:layout_constraintTop_toBottomOf="@+id/edtFechaLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtHoraIni"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/poppins"
+            android:inputType="time"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Hora Fin -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtHoraFinLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:hint="@string/m_registro_txt_horaFinal"
-        android:inputType="time"
-        app:layout_constraintEnd_toEndOf="@+id/edtHoraIni"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edtHoraIni"
-        app:layout_constraintTop_toBottomOf="@+id/edtHoraIni" />
+        app:layout_constraintEnd_toEndOf="@+id/edtHoraIniLayout"
+        app:layout_constraintStart_toStartOf="@+id/edtHoraIniLayout"
+        app:layout_constraintTop_toBottomOf="@+id/edtHoraIniLayout">
 
-    <EditText
-        android:id="@+id/edtDocente"
-        android:layout_width="wrap_content"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtHoraFin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/poppins"
+            android:inputType="time"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Docente -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtDocenteLayout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:ems="10"
+        android:layout_marginTop="10dp"
         android:hint="@string/m_registro_txt_docente"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/edtHoraFin"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edtHoraFin"
-        app:layout_constraintTop_toBottomOf="@+id/edtHoraFin" />
+        app:layout_constraintEnd_toEndOf="@+id/edtHoraFinLayout"
+        app:layout_constraintStart_toStartOf="@+id/edtHoraFinLayout"
+        app:layout_constraintTop_toBottomOf="@+id/edtHoraFinLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtDocente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Descripción -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtDescripRegLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="@string/m_registro_txt_descripcion"
+        app:layout_constraintEnd_toEndOf="@+id/edtDocenteLayout"
+        app:layout_constraintStart_toStartOf="@+id/edtDocenteLayout"
+        app:layout_constraintTop_toBottomOf="@+id/edtDocenteLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtDescripReg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Botón -->
+    <Button
+        android:id="@+id/btnRegistroRegistro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:height="60dp"
+        android:backgroundTint="#009688"
+        android:fontFamily="@font/poppins"
+        android:text="@string/l_botonRegistrar"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/edtDescripRegLayout"
+        app:layout_constraintStart_toStartOf="@+id/edtDescripRegLayout"
+        app:layout_constraintTop_toBottomOf="@+id/edtDescripRegLayout" />
 
     <TextView
         android:id="@+id/txtAver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="55dp"
+        android:fontFamily="@font/poppins"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bottomAppBar4" />
 
-    <EditText
-        android:id="@+id/edtHoraIni"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:ems="10"
-        android:hint="@string/m_resistro_txt_horaInicio"
-        android:inputType="time"
-        app:layout_constraintEnd_toEndOf="@+id/edtFecha"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edtFecha"
-        app:layout_constraintTop_toBottomOf="@+id/edtFecha" />
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="274dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/poppins"
+        android:text="Registro Bitácora"
+        android:textColor="#009587"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottomAppBar4" />
 
     <Button
-        android:id="@+id/btnRegistroRegistro"
+        android:id="@+id/btnVolverRegistro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
-        android:text="@string/l_botonRegistrar"
-        app:layout_constraintEnd_toEndOf="@+id/edtDescripReg"
-        app:layout_constraintStart_toStartOf="@+id/edtDescripReg"
-        app:layout_constraintTop_toBottomOf="@+id/edtDescripReg" />
-
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#FAF3FB"
+        android:fontFamily="@font/poppins"
+        android:text="Cancelar Registro"
+        android:textColor="#009587"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/btnRegistroRegistro"
+        app:layout_constraintStart_toStartOf="@+id/btnRegistroRegistro"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistroRegistro" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,7 +23,7 @@ class MostrarUsuarios : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMostrarUsuariosBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setSupportActionBar(binding.toolbar4)
+        setSupportActionBar(binding.bottomAppBar7)
 
 
         val queue = Volley.newRequestQueue(this)

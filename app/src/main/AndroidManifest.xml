@@ -20,10 +20,10 @@
             android:name=".registro.Registrar"
             android:exported="false" />
         <activity
-            android:name=".registro.MainActivity"
+            android:name=".IniciarSesion"
             android:exported="false" />
         <activity
-            android:name=".Principal"
+            android:name=".registro.MainActivity"
             android:exported="false" />
         <activity
             android:name=".laboratorio.EditarLabs"
@@ -38,7 +38,7 @@
             android:name=".laboratorio.MenuLabs"
             android:exported="false" />
         <activity
-            android:name=".IniciarSesion"
+            android:name=".admin.MenuAdmin"
             android:exported="false" />
         <activity
             android:name=".admin.MostrarUsuarios"
@@ -50,7 +50,7 @@
             android:name=".admin.InsercionAlumnos"
             android:exported="false" />
         <activity
-            android:name=".admin.MenuAdmin"
+            android:name=".Principal"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

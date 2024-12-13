@@ -7,23 +7,70 @@
     android:layout_height="match_parent"
     tools:context=".Principal">
 
-    <Button
-        android:id="@+id/btnAdmin"
+    <ImageView
+        android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:text="admin"
+        android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/workstation" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/poppins"
+        android:text="Bitacora Digital"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#023059"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppins"
+        android:text="Bienvenido al sistema de gestión del centro de computo de la UTEZ."
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView16"
+        app:layout_constraintStart_toStartOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <Button
-        android:id="@+id/btnLabs"
+        android:id="@+id/btnSalirOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
-        android:text="labs"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAdmin" />
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#FCF5FD"
+        android:fontFamily="@font/poppins"
+        android:text="Salir"
+        android:textColor="#030A8B"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnIniciarSesionn"
+        app:layout_constraintStart_toStartOf="@+id/btnIniciarSesionn"
+        app:layout_constraintTop_toBottomOf="@+id/btnIniciarSesionn" />
+
+    <Button
+        android:id="@+id/btnIniciarSesionn"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:height="60dp"
+        android:backgroundTint="#030A8C"
+        android:text="Iniciar Sesión"
+        android:textSize="20sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView17"
+        app:layout_constraintStart_toStartOf="@+id/textView17"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
 </androidx.constraintlayout.widget.ConstraintLayout>

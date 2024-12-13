@@ -41,49 +41,8 @@
             android:textSize="30sp" />
     </androidx.cardview.widget.CardView>
 
+
     <!-- Primer CardView como Botón -->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardButton1"
-        android:layout_width="180dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="260dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:onClick="onCardClick1"
-        app:cardBackgroundColor="#FFFFFF"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="4dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bottomAppBar5">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="16dp"
-            android:scrollbarSize="15sp">
-
-            <ImageView
-                android:id="@+id/icon1"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:contentDescription="Icono 1"
-                android:src="@drawable/forma" />
-
-            <TextView
-                android:layout_width="140dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/poppins"
-                android:gravity="center"
-                android:scrollbarSize="15sp"
-                android:text="Registrar Alumnos"
-                android:textColor="#030A8C"
-                android:textSize="15sp" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
 
     <!-- Segundo CardView como Botón -->
     <androidx.cardview.widget.CardView
@@ -128,47 +87,89 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <!-- Nueva CardView pequeña debajo de las anteriores -->
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardButton3"
-        android:layout_width="150dp"
-        android:layout_height="120dp"
+        android:id="@+id/cardButton1"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="260dp"
         android:clickable="true"
         android:focusable="true"
-        android:onClick="onCardClick3"
-        app:cardBackgroundColor="#FDFDFD"
+        android:onClick="onCardClick1"
+        app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="10dp"
         app:cardElevation="4dp"
-        app:layout_constraintEnd_toEndOf="@+id/cardButton1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardButton1">
+        app:layout_constraintTop_toBottomOf="@+id/bottomAppBar5">
 
         <LinearLayout
-            android:id="@+id/cardButton3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="16dp"
+            android:scrollbarSize="15sp">
+
+            <ImageView
+                android:id="@+id/icon1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Icono 1"
+                android:src="@drawable/forma" />
+
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:scrollbarSize="15sp"
+                android:text="Registrar Alumnos"
+                android:textColor="#030A8C"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardButton3"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="onCardClick1"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardButton1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:scrollbarSize="15sp">
 
             <ImageView
                 android:id="@+id/icon3"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:contentDescription="Icono 3"
-                android:src="@drawable/forma" />
+                android:contentDescription="Icono 1"
+                android:src="@drawable/cerrar" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/poppins"
                 android:gravity="center"
-                android:text="Nuevo Botón"
-                android:textColor="#FFFFFF"
-                android:textSize="14sp" />
+                android:scrollbarSize="15sp"
+                android:text="Salir"
+                android:textColor="#030A8C"
+                android:textSize="15sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -181,19 +182,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bottomAppBar5"
         app:srcCompat="@drawable/ajustes" />
-
-    <androidx.constraintlayout.helper.widget.Layer
-        android:id="@+id/layer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:constraint_referenced_ids="bottomAppBar5" />
-
-    <androidx.constraintlayout.helper.widget.Layer
-        android:id="@+id/layer2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:constraint_referenced_ids="bottomAppBar5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
