@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
             //Para mandar a la sig pagina
             valorQr = result.contents;
             val intent = Intent(this, InicioRegistro::class.java)
-            intent.putExtra("qr_result",valorQr)
+            intent.putExtra("qr",valorQr)
             startActivity(intent)
 
         }

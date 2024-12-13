@@ -40,4 +40,11 @@
     <string name="m_inisio_sesion_txt_correo">Matricula</string>
     <string name="m_inisio_sesion_txt_cintra">Contraseña</string>
     <string name="m_inisio_sesion_txt_cerrarsesion">Cerrar Sesión</string>
+    <string name="m_registro_txt_matricula">Matricula</string>
+    <string name="m_resistro_txt_horaInicio">Hora de inicio</string>
+    <string name="m_registro_txt_horaFinal">Hora Final</string>
+    <string name="m_registro_txt_docente">Docente</string>
+    <string name="m_registro_txt_comentario">comentario</string>
+    <string name="m_registro_txt_fecha1">Fecha</string>
+    <string name="m_registro_txt_descripcion">Descripción</string>
 </resources>

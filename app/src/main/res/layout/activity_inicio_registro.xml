@@ -7,4 +7,113 @@
     android:layout_height="match_parent"
     tools:context=".registro.InicioRegistro">
 
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:backgroundTint="#009688"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtMatricula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/l_matricula"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/txtAver"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="@+id/txtAver"
+        app:layout_constraintTop_toBottomOf="@+id/txtAver" />
+
+    <EditText
+        android:id="@+id/edtDescripReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:hint="@string/m_registro_txt_descripcion"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/edtDocente"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtDocente"
+        app:layout_constraintTop_toBottomOf="@+id/edtDocente" />
+
+    <EditText
+        android:id="@+id/edtFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="@string/m_registro_txt_fecha1"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="@+id/edtMatricula"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtMatricula"
+        app:layout_constraintTop_toBottomOf="@+id/edtMatricula" />
+
+    <EditText
+        android:id="@+id/edtHoraFin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:hint="@string/m_registro_txt_horaFinal"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="@+id/edtHoraIni"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtHoraIni"
+        app:layout_constraintTop_toBottomOf="@+id/edtHoraIni" />
+
+    <EditText
+        android:id="@+id/edtDocente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:hint="@string/m_registro_txt_docente"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/edtHoraFin"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtHoraFin"
+        app:layout_constraintTop_toBottomOf="@+id/edtHoraFin" />
+
+    <TextView
+        android:id="@+id/txtAver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottomAppBar4" />
+
+    <EditText
+        android:id="@+id/edtHoraIni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="@string/m_resistro_txt_horaInicio"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="@+id/edtFecha"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtFecha"
+        app:layout_constraintTop_toBottomOf="@+id/edtFecha" />
+
+    <Button
+        android:id="@+id/btnRegistroRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:text="@string/l_botonRegistrar"
+        app:layout_constraintEnd_toEndOf="@+id/edtDescripReg"
+        app:layout_constraintStart_toStartOf="@+id/edtDescripReg"
+        app:layout_constraintTop_toBottomOf="@+id/edtDescripReg" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

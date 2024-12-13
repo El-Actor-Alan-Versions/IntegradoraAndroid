@@ -17,7 +17,10 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".registro.InicioRegistro"
+            android:name=".registro.Registrar"
+            android:exported="false" />
+        <activity
+            android:name=".registro.MainActivity"
             android:exported="false" />
         <activity
             android:name=".Principal"
@@ -47,7 +50,7 @@
             android:name=".admin.InsercionAlumnos"
             android:exported="false" />
         <activity
-            android:name=".IniciarSesion"
+            android:name=".registro.InicioRegistro"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -56,7 +59,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".registro.MainActivity"
+            android:name=".IniciarSesion"
             android:exported="false" />
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
