@@ -10,6 +10,9 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import mx.edu.utez.appbitacora.R
 import mx.edu.utez.appbitacora.databinding.ActivityMenuAdminBinding
+import androidx.cardview.widget.CardView
+import android.view.animation.AnimationUtils
+
 
 class MenuAdmin : AppCompatActivity() {
     private lateinit var binding: ActivityMenuAdminBinding
@@ -17,10 +20,46 @@ class MenuAdmin : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMenuAdminBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setSupportActionBar(binding.toolbar)
+        setSupportActionBar(binding.bottomAppBar5)
+        // Cargar la animación
+        val animation = AnimationUtils.loadAnimation(this, R.anim.entrada_cards)
+
+        // Aplicar la animación al componente 'mainMenu1'
+        binding.cardButton1.startAnimation(animation)
+        binding.cardButton2.startAnimation(animation)
+        binding.cardButton3.startAnimation(animation)
 
 
 
+        val cardButton1 = findViewById<CardView>(R.id.cardButton1)
+        val cardButton2 = findViewById<CardView>(R.id.cardButton2)
+        val cardButton3 = findViewById<CardView>(R.id.cardButton3)
+
+        cardButton3.setOnClickListener {
+            finish() // Cierra la actividad actual
+        }
+
+
+
+        // Configura las acciones de los botones
+        cardButton1.setOnClickListener {
+            onCardClick1()
+        }
+
+        cardButton2.setOnClickListener {
+            onCardClick2()
+        }
+
+
+    }
+
+    private fun onCardClick1() {
+        val intent = Intent(this, InsercionAlumnos::class.java)
+        startActivity(intent)
+    }
+    private fun onCardClick2() {
+        val intent = Intent(this, MostrarUsuarios::class.java)
+        startActivity(intent)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

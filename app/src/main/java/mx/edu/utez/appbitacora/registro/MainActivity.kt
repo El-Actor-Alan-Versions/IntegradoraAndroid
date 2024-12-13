@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.animation.AnimationUtils
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.journeyapps.barcodescanner.ScanContract
@@ -24,11 +25,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         setSupportActionBar(binding.bottomAppBar3)
 
+        // Cargar la animación
+        val animation = AnimationUtils.loadAnimation(this, R.anim.entrada_cards)
 
-        binding.btnInsertar.setOnClickListener {
-            val intel = Intent(this,InsercionAlumnos::class.java)
-            startActivity(intel)
-        }
+        binding.imageView3.startAnimation(animation)
+        binding.btnScan.startAnimation(animation)
+
 
         binding.btnScan.setOnClickListener {
             //Esto es para configurar el scan
@@ -69,7 +71,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
-
+            R.id.mnuSalirR -> finish()
         }
         return super.onOptionsItemSelected(item)
     }

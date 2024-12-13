@@ -23,11 +23,11 @@ class MostrarUsuarios : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMostrarUsuariosBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setSupportActionBar(binding.toolbar4)
+        setSupportActionBar(binding.bottomAppBar7)
 
 
         val queue = Volley.newRequestQueue(this)
-        val url = "http://192.168.100.5:8080/api/usuarios"
+        val url = "http://192.168.1.68:8080/api/usuarios"
         val body = null
         val metodo = Request.Method.GET
 

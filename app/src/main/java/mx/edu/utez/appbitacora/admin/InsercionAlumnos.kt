@@ -25,7 +25,7 @@ class InsercionAlumnos : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityInsercionAlumnosBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setSupportActionBar(binding.toolbar2)
+        setSupportActionBar(binding.bottomAppBar6)
 
         val list = listOf("Alumno","Admin","Soporte")
         val adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1, list)
@@ -45,7 +45,7 @@ class InsercionAlumnos : AppCompatActivity() {
                 !correo.isNullOrEmpty() && !gradoGrupo.isNullOrEmpty() && !carrera.isNullOrEmpty() && !rol.isNullOrEmpty()){
 
                 val queue = Volley.newRequestQueue(this)
-                val url = "http://192.168.100.5:8080/api/usuarios"
+                val url = "http://192.168.1.68:8080/api/usuarios"
                 val metodo = Request.Method.POST
                 val body = JSONObject()
                 body.put("matricula", matricula)
@@ -69,6 +69,8 @@ class InsercionAlumnos : AppCompatActivity() {
                 val request = JsonObjectRequest(metodo, url, body, listener, errorListener)
                 queue.add(request)
 
+            }else{
+                Toast.makeText(this, "Completa todos los campos", Toast.LENGTH_LONG).show()
             }
 
         }

@@ -5,117 +5,188 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FCF5FD"
     tools:context=".admin.InsercionAlumnos">
 
-    <EditText
-        android:id="@+id/edtCorreo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/l_correo"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="@+id/edtMatricula"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edtMatricula"
-        app:layout_constraintTop_toBottomOf="@+id/edtMatricula" />
-
-    <EditText
-        android:id="@+id/edtNombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="@string/l_nombre"
-        android:inputType="text"
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="144dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="250dp"
+        android:fontFamily="@font/poppins"
+        android:text="Registro "
+        android:textColor="#1D0AF3"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+        app:layout_constraintTop_toBottomOf="@+id/bottomAppBar6" />
 
-    <EditText
-        android:id="@+id/edtMatricula"
-        android:layout_width="wrap_content"
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar6"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:hint="@string/l_matricula"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtNombre" />
-
-    <EditText
-        android:id="@+id/edtGradoGrupo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:hint="@string/l_gradogrupo"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/edtCorreo"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edtCorreo"
-        app:layout_constraintTop_toBottomOf="@+id/edtCorreo" />
-
-    <EditText
-        android:id="@+id/edtCarrera"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:ems="10"
-        android:hint="@string/l_carrera"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/edtGradoGrupo"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edtGradoGrupo"
-        app:layout_constraintTop_toBottomOf="@+id/edtGradoGrupo" />
-
-    <EditText
-        android:id="@+id/edtPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/edtCarrera"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edtCarrera"
-        app:layout_constraintTop_toBottomOf="@+id/edtCarrera" />
-
-    <Spinner
-        android:id="@+id/SpinerRoles"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        app:layout_constraintEnd_toEndOf="@+id/edtPassword"
-        app:layout_constraintStart_toStartOf="@+id/edtPassword"
-        app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
-
-    <Button
-        android:id="@+id/btnRegistrarUsuario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:text="@string/l_botonRegistrar"
-        app:layout_constraintEnd_toEndOf="@+id/SpinerRoles"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="@+id/SpinerRoles"
-        app:layout_constraintTop_toBottomOf="@+id/SpinerRoles" />
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar2"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
+        android:layout_gravity="bottom"
+        app:backgroundTint="#1D0AF5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Nombre TextInput -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtNombreLayout"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="@string/l_nombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11">
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#2D2961"
+            android:fontFamily="@font/poppins"
+            android:textColorHint="#2D2961"
+            android:backgroundTint="#FFFFFF"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Matrícula TextInput -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtMatriculaLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/l_matricula"
+        app:layout_constraintEnd_toEndOf="@+id/edtNombreLayout"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@+id/edtNombreLayout"
+        app:layout_constraintTop_toBottomOf="@+id/edtNombreLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtMatricula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/poppins"
+            android:textColor="#2D2961"
+            android:textColorHint="#2D2961" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Correo TextInput -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtCorreoLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/l_correo"
+        app:layout_constraintEnd_toEndOf="@+id/edtMatriculaLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtMatriculaLayout"
+        app:layout_constraintTop_toBottomOf="@+id/edtMatriculaLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/poppins"
+            android:inputType="textEmailAddress"
+            android:textColor="#2D2961"
+            android:textColorHint="#2D2961" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Grado/Grupo TextInput -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtGradoGrupoLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/l_gradogrupo"
+        app:layout_constraintEnd_toEndOf="@+id/edtCorreoLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtCorreoLayout"
+        app:layout_constraintTop_toBottomOf="@+id/edtCorreoLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtGradoGrupo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/poppins"
+            android:textColor="#2D2961"
+            android:textColorHint="#2D2961" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Carrera TextInput -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtCarreraLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/l_carrera"
+        app:layout_constraintEnd_toEndOf="@+id/edtGradoGrupoLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtGradoGrupoLayout"
+        app:layout_constraintTop_toBottomOf="@+id/edtGradoGrupoLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtCarrera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/poppins"
+            android:textColor="#2D2961"
+            android:textColorHint="#2D2961" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Password TextInput -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtPasswordLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña"
+        app:layout_constraintEnd_toEndOf="@+id/edtCarreraLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtCarreraLayout"
+        app:layout_constraintTop_toBottomOf="@+id/edtCarreraLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:fontFamily="@font/poppins"
+            android:password="true"
+            android:textColor="#2D2961"
+            android:textColorHint="#2D2961" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/SpinerRoles"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#000000"
+        android:hapticFeedbackEnabled="false"
+        android:popupBackground="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/edtPasswordLayout"
+        app:layout_constraintStart_toStartOf="@+id/edtPasswordLayout"
+        app:layout_constraintTop_toBottomOf="@+id/edtPasswordLayout" />
+
+    <Button
+        android:id="@+id/btnRegistrarUsuario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:height="60dp"
+        android:backgroundTint="#1D0AF3"
+        android:fontFamily="@font/poppins"
+        android:text="@string/l_botonRegistrar"
+        android:textSize="18sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/edtPasswordLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/edtPasswordLayout"
+        app:layout_constraintTop_toBottomOf="@+id/SpinerRoles" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -26,7 +26,7 @@ class EditarAlumno : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityEditarAlumnoBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setSupportActionBar(binding.toolbar3)
+        setSupportActionBar(binding.bottomAppBar8)
         val id = intent.getStringExtra("id")
         binding.edtName.setText(intent.getStringExtra("nombre"))
         binding.edtMatriculaU.setText(intent.getStringExtra("matricula"))
@@ -45,7 +45,7 @@ class EditarAlumno : AppCompatActivity() {
             val carrera = binding.edtCarreraU.text.toString()
 
             val queue = Volley.newRequestQueue(this)
-            val url = "http://192.168.100.5:8080/api/usuarios/"+id
+            val url = "http://192.168.1.68:8080/api/usuarios/"+id
             val metodo = Request.Method.PUT
             val body = JSONObject()
             body.put("matricula", matricula)
@@ -75,7 +75,7 @@ class EditarAlumno : AppCompatActivity() {
 
         binding.btnDesactivar.setOnClickListener {
             val queue = Volley.newRequestQueue(this)
-            val url = "http://192.168.100.5:8080/api/usuarios/estatus/"+id
+            val url = "http://192.168.1.68:8080/api/usuarios/estatus/"+id
             val metodo = Request.Method.PUT
             val body = null
             val listener = Response.Listener<JSONObject> {
@@ -92,7 +92,7 @@ class EditarAlumno : AppCompatActivity() {
             builder.setNegativeButton("Si"){result,_ ->
                 queue.add(request)
             }
-            builder.setPositiveButton("Si"){result,_ ->
+            builder.setPositiveButton("No"){result,_ ->
 
             }
             builder.show()

@@ -4,10 +4,10 @@
     <selectionStates>
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2024-12-09T08:33:07.087753100Z">
+        <DropdownSelection timestamp="2024-12-13T05:51:09.996596800Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\walge\.android\avd\Pixel_2_XL_API_27.avd" />
+              <DeviceId pluginId="PhysicalDevice" identifier="serial=ZT322FRZSJ" />
             </handle>
           </Target>
         </DropdownSelection>

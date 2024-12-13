@@ -16,14 +16,13 @@ class Principal : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPrincipalBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.btnAdmin.setOnClickListener{
-        val intnt = Intent(this, MenuAdmin::class.java)
+        binding.btnIniciarSesionn.setOnClickListener{
+        val intnt = Intent(this, IniciarSesion::class.java)
         startActivity(intnt)
         }
 
-        binding.btnLabs.setOnClickListener{
-            val intnt = Intent(this, MenuLabs::class.java)
-            startActivity(intnt)
+        binding.btnSalirOut.setOnClickListener{
+            finish ()
         }
     }
 }

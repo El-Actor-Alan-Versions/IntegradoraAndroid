@@ -9,7 +9,7 @@
     <string name="l_carrera">Carrera</string>
     <string name="l_gradogrupo">Grado y Grupo</string>
     <string name="l_rol">Rol</string>
-    <string name="l_contra">Contraseña</string>
+    <string name="l_contra">Ingresa tu contraseña...</string>
     <string name="l_botonRegistrar">Registrar</string>
     <string name="l_botonActualizar">Actualizar</string>
     <string name="l_botonDescativar">Desactivar</string>
@@ -37,7 +37,7 @@
     <string name="m_labs_registrar">Registrar</string>
 
     <string name="p_inisio_sesion_btn">Iniciar Sesión</string>
-    <string name="m_inisio_sesion_txt_correo">Matricula</string>
+    <string name="m_inisio_sesion_txt_correo">Ingresa tu matricula...</string>
     <string name="m_inisio_sesion_txt_cintra">Contraseña</string>
     <string name="m_inisio_sesion_txt_cerrarsesion">Cerrar Sesión</string>
     <string name="m_registro_txt_matricula">Matricula</string>
