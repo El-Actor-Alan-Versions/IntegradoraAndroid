@@ -17,9 +17,17 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".equipos.MostrarEquipos"
+            android:exported="false" />
+        <activity
+            android:name=".laboratorio.RegistrarLabs"
+            android:exported="false" />
+        <activity
+            android:name=".equipos.MenuEquipos"
+            android:exported="false" />
+        <activity
             android:name=".registro.InicioRegistro"
             android:exported="false" />
-
         <activity
             android:name=".registro.MainActivity"
             android:exported="false" />
@@ -30,7 +38,7 @@
             android:name=".laboratorio.EditarLabs"
             android:exported="false" />
         <activity
-            android:name=".laboratorio.RegistrarLabs"
+            android:name=".IniciarSesion"
             android:exported="false" />
         <activity
             android:name=".laboratorio.MostrarLabs"
@@ -51,7 +59,7 @@
             android:name=".admin.InsercionAlumnos"
             android:exported="false" />
         <activity
-            android:name=".IniciarSesion"
+            android:name=".equipos.RegistroEquipo"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
