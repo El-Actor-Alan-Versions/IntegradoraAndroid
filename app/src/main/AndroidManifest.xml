@@ -38,7 +38,7 @@
             android:name=".laboratorio.EditarLabs"
             android:exported="false" />
         <activity
-            android:name=".IniciarSesion"
+            android:name=".equipos.RegistroEquipo"
             android:exported="false" />
         <activity
             android:name=".laboratorio.MostrarLabs"
@@ -59,7 +59,7 @@
             android:name=".admin.InsercionAlumnos"
             android:exported="false" />
         <activity
-            android:name=".equipos.RegistroEquipo"
+            android:name=".IniciarSesion"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
